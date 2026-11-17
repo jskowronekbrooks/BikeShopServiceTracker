@@ -1,6 +1,6 @@
 public class Bicycle {
+    private static final int SERVICE_MILEAGE = 500;
     private static int nextId = 1;
-    private static int serviceMileage = 500;
 
     private String owner, model;
     private int mileage;
@@ -15,7 +15,7 @@ public class Bicycle {
         id = nextId;
         nextId++;
 
-        ServiceRecord record = new ServiceRecord("Owner: " + owner + "Model: " + model);
+        ServiceRecord record = new ServiceRecord("Owner: " + owner + " Model: " + model);
         this.record = record;
     }
 
@@ -25,8 +25,9 @@ public class Bicycle {
         }
     }
 
+    // Needs service if mileage is above 500 miles
     public boolean needsService() {
-        if (mileage > serviceMileage) {
+        if (mileage > SERVICE_MILEAGE) {
             return true;
         }
         return false;

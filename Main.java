@@ -4,7 +4,7 @@ public class Main {
         Bicycle bikeB = new Bicycle("Chris", "Roadster");
 
 
-        System.out.println("INITIAL BYCYCLES");
+        System.out.println("INITIAL BICYCLES");
         System.out.println("Bike A: " + bikeA);
         System.out.println("Bike B: " + bikeB);
         System.out.println();
@@ -39,11 +39,13 @@ public class Main {
         System.out.println();
 
 
-        System.out.println("AFTER SERVCE");
+        System.out.println("AFTER SERVICE");
         double bikeAServiceHours = 3.5;
         double bikeBServiceHours = 2;
 
         BikeShop.serviceBike(bikeA, bikeAServiceHours);
         BikeShop.serviceBike(bikeB, bikeBServiceHours);
+
+        System.out.println("Completed repairs (expected 2: " + BikeShop.getTotalRepairs());
     }
 }

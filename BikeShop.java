@@ -1,9 +1,9 @@
 public class BikeShop {
-    public static final double LABOR_RATE = 70.0;
+    public static final double LABOR_RATE = 65.0;
     private static int completedRepairs = 0;
 
     public static void serviceBike(Bicycle bike, double hours) {
-        if (hours < 0.0) {
+        if (hours <= 0.0) {
             System.out.println("Invalid hours");
         } else {
             ServiceRecord bikeRecord = bike.getServiceRecord();
